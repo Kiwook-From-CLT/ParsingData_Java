@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<!DOCTYPE properties [
+    <!ELEMENT properties ( comment?, sqlinfo* ) >
+        <!ATTLIST properties version CDATA #FIXED "1.0">
+    <!ELEMENT comment (#PCDATA) >
+    <!ELEMENT sqlinfo (#PCDATA) >
+        <!ATTLIST sqlinfo key CDATA #REQUIRED>
+]>
+
+<properties> 
+   <comment>Sample Queries Property File</comment>
+
+<!-- You can add queries below section in the following XML foramt -->
+
+
+<!-- Select Query -->
+	
+	<sqlinfo key="selectDocInfoParam_Oracle">
+		select "COLUMN NAMES" 
+		from "TABLE_NAME"
+		where CONDITIONS
+        order by CONDITIONS
+	</sqlinfo>   
+
+
+<!-- insert Query -->
+	
+	<sqlinfo key="insertDocInfo_Oracle">
+		insert into "TABLE_NAME"("COLUMN NAMES")
+		values("GIVEN VALUES FROM JAVA CODE")
+	</sqlinfo>
+</properties>
+
+

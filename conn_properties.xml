@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<!DOCTYPE properties [
+    <!ELEMENT properties ( comment?, jdbcinfo*, entry*, fileinfo*, ftpinfo* ) >
+        <!ATTLIST properties version CDATA #FIXED "1.0">
+    <!ELEMENT comment (#PCDATA) >
+    <!ELEMENT jdbcinfo (#PCDATA) >
+        <!ATTLIST jdbcinfo key CDATA #REQUIRED>
+    <!ELEMENT entry (#PCDATA) >
+        <!ATTLIST entry key CDATA #REQUIRED>
+    <!ELEMENT fileinfo (#PCDATA) >
+        <!ATTLIST fileinfo key CDATA #REQUIRED>
+    <!ELEMENT ftpinfo (#PCDATA) >
+        <!ATTLIST ftpinfo key CDATA #REQUIRED>
+]>
+
+<properties> 
+   <comment>DATABASE CONNECTION INFORMATION PROPERTY SAMPLE</comment>
+
+<!-- jdbc driver info : Oracle / msSql / mySql (Case sensitive) -->
+   <jdbcinfo key="jdbcdriver">Oracle</jdbcinfo>
+
+
+
+<!-- database connection information -->
+
+   <entry key="jdbc.Oracle.dbdriver">oracle.jdbc.driver.OracleDriver</entry>
+   <entry key="jdbc.Oracle.dbconnection">jdbc:oracle:thin:@("YOUR DATABASE'S CONNECTION INFORMATION")</entry>
+   <entry key="jdbc.Oracle.dbusername">"USER ID"</entry>
+   <entry key="jdbc.Oracle.dbpassword">"PASSWORD"</entry>
+
+<!-- postgresql -->
+   <entry key="jdbc.mySql.dbdriver">org.postgresql.Driver</entry>
+   <entry key="jdbc.mySql.dbconnection">jdbc:postgresql://192.0.0.8/postgres</entry>
+   <entry key="jdbc.mySql.dbusername">"USER ID"</entry>
+   <entry key="jdbc.mySql.dbpassword">"PASSWORD"</entry>
+
+
+
+
+<!-- Full path of data file  -->
+    <fileinfo key="directory">"FILE PATH"</fileinfo>
+
+
+<!-- sftp connection info -->
+	<ftpinfo key="sftp.host">192.0.0.8</ftpinfo>
+	<ftpinfo key="sftp.port">22</ftpinfo>
+	<ftpinfo key="sftp.userId">ID</ftpinfo>
+	<ftpinfo key="sftp.password">PASS</ftpinfo>
+	<ftpinfo key="sftp.workDirectory">work directory path</ftpinfo>
+</properties>
+
+
